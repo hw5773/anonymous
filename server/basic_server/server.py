@@ -11,7 +11,7 @@ def api_location():
 		return jsonify({"message":"test_get", "latitude":38, "longitude": 100})
 
 	elif request.method == 'POST':
-		js = request.json
+		js = request.json[0]
 		lat = js.get("latitude")
 		lon = js.get("longitude")
 
